@@ -1,17 +1,7 @@
 # Common GPG Commands
 
-##Install gpg (Debian/Ubuntu)
-    apt-get update
-    apt-get install gpg -y
-
-##Print the available entropy (Debian/Ubuntu)
+##Print the available system entropy level
     cat /proc/sys/kernel/random/entropy_avail
-
-##Install rng-tools (Debian/Ubuntu)
-    apt-get install rng-tools -y
-    echo "HRNGDEVICE=/dev/null" >> /etc/default/rng-tools
-    echo "RNGDOPTIONS="-r /dev/urandom" >> /etc/default/rng-tools
-    service rng-tools restart
 
 ##Generate a new public/private keypair
     gpg --gen-key

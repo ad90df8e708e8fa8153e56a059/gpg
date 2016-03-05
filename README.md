@@ -13,10 +13,10 @@
     gpg -a --export "name"
 
 ##Print a public key to a file
-    gpg -a --export "name" -o public.key
+    gpg -a --export "name" > public.key
 
 ##Print a private key to file
-    gpg -a --export-secret-key "name" -o private.key
+    gpg -a --export-secret-key "name" > private.key
 
 ##Import a public or private key file to keyring
     gpg --import keyfile.gpg
@@ -28,10 +28,10 @@
     gpg --delete-secret-key "name"
 
 ##Encrypt a file
-    gpg -a -e -u "Sender" -r "Receiver" clear.txt -o encrypted.gpg
+    gpg -a -e -u "Sender" -r "Receiver" clear.txt > encrypted.gpg
 
 ##Decrypt a file
-    gpg -d encrypted.gpg -o clear.txt
+    gpg -d encrypted.gpg > clear.txt
 
 ##Verify a signature for "file.iso"
     gpg --verify file.iso.asc
